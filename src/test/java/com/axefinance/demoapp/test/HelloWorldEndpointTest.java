@@ -49,7 +49,7 @@ public class HelloWorldEndpointTest {
         // A more terse way to test just an endpoint
         Saying actual = resources.client().target("/hello-world")
                 .request().get(Saying.class);
-        Saying expected = new Saying(1, "Hello, Stranger!");
+        Saying expected = new Saying(1, "HelloMR, Stranger!");
         assertThat(actual.getId()).isEqualTo(expected.getId());
         assertThat(actual.getContent()).isEqualTo(expected.getContent());
     }
